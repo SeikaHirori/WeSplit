@@ -3,16 +3,16 @@
 ***House Keeping***
 
 Project Guidelines:
-    - https://www.hackingwithswift.com/100/swiftui/16
+- https://www.hackingwithswift.com/100/swiftui/16
 
 Index for Checklist:
-    - [ ] = TO-DO
-    - [x] = COMPLETED
-    - [WIP] = Work-in-progress
+- [ ] = TO-DO
+- [x] = COMPLETED
+- [WIP] = Work-in-progress
 
 
 Checklist | Phases of project: 
-- [x] [WeSplit: Introduction]  (https://www.hackingwithswift.com/books/ios-swiftui/wesplit-introduction)
+- [x] [WeSplit: Introduction](https://www.hackingwithswift.com/books/ios-swiftui/wesplit-introduction)
 - [WIP] [Understanding the basic structure of a SwiftUI app](https://www.hackingwithswift.com/books/ios-swiftui/understanding-the-basic-structure-of-a-swiftui-app)
 - [ ] [Creating a form](https://www.hackingwithswift.com/books/ios-swiftui/creating-a-form)
 - [ ] [Adding a navigation bar] (https://www.hackingwithswift.com/books/ios-swiftui/adding-a-navigation-bar)
