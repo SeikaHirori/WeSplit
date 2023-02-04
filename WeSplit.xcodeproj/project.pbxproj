@@ -44,6 +44,7 @@
 		3FB1EF2B298F045A000B7063 /* WeSplitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeSplitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB1EF2F298F045A000B7063 /* WeSplitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitUITests.swift; sourceTree = "<group>"; };
 		3FB1EF31298F045A000B7063 /* WeSplitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FB1EF3E298F0A46000B7063 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		3FB1EF08298F0458000B7063 = {
 			isa = PBXGroup;
 			children = (
+				3FB1EF3E298F0A46000B7063 /* README.md */,
 				3FB1EF13298F0459000B7063 /* WeSplit */,
 				3FB1EF24298F045A000B7063 /* WeSplitTests */,
 				3FB1EF2E298F045A000B7063 /* WeSplitUITests */,

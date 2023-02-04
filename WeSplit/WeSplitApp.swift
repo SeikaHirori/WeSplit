@@ -15,3 +15,9 @@ struct WeSplitApp: App {
         }
     }
 }
+
+func anotherWorld() -> String {
+    let output:String = "This message is brought to you from another world! It's a lovely day over here :D"
+    
+    return output
+}
