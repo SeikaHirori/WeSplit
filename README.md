@@ -6,9 +6,9 @@ Project Guidelines:
     - https://www.hackingwithswift.com/100/swiftui/16
 
 Index for Checklist:
-    [ ] = TO-DO
-    [x] = COMPLETED
-    [WIP] = Work-in-progress
+    - [ ] = TO-DO
+    - [x] = COMPLETED
+    - [WIP] = Work-in-progress
 
 
 Checklist | Phases of project: 
