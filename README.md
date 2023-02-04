@@ -11,7 +11,7 @@ Index for Checklist:
 
 Checklist | Phases of project: 
 - [x] [WeSplit: Introduction](https://www.hackingwithswift.com/books/ios-swiftui/wesplit-introduction)
-- [] [Understanding the basic structure of a SwiftUI app](https://www.hackingwithswift.com/books/ios-swiftui/understanding-the-basic-structure-of-a-swiftui-app)
+- [ ] [Understanding the basic structure of a SwiftUI app](https://www.hackingwithswift.com/books/ios-swiftui/understanding-the-basic-structure-of-a-swiftui-app)
     - WIP
 - [ ] [Creating a form](https://www.hackingwithswift.com/books/ios-swiftui/creating-a-form)
 - [ ] [Adding a navigation bar](https://www.hackingwithswift.com/books/ios-swiftui/adding-a-navigation-bar)
