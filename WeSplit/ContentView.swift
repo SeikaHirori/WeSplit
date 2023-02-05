@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var checkAmount:Double = 0.0
-    @State private var numberOfPeople: Int
+    @State private var numberOfPeople: Int = 2
     @State private var tipPercentage:Int = 20
     
     let tipPercentages:[Int] = [10, 15, 20, 25, 0]
