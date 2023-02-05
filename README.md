@@ -9,12 +9,12 @@ Index for Checklist:
 - [ ] = TO-DO
 - [x] = COMPLETED
 
-Three Phases of project 1:
+Three Phases of Project 1:
 - [Part 1](https://www.hackingwithswift.com/100/swiftui/16)
 - [Part 2](https://www.hackingwithswift.com/100/swiftui/17)
 - [Part 3](https://www.hackingwithswift.com/100/swiftui/18)
 __________
-Checklist | Phase 1 of project: 
+Checklist | Part 1: 
 - [x] [WeSplit: Introduction](https://www.hackingwithswift.com/books/ios-swiftui/wesplit-introduction)
 - [ ] [Understanding the basic structure of a SwiftUI app](https://www.hackingwithswift.com/books/ios-swiftui/understanding-the-basic-structure-of-a-swiftui-app)
     - WIP
