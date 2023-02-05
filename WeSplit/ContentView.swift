@@ -22,6 +22,7 @@ struct ContentView: View {
                 
                 // Xcode recommends this call instead
                 TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    .keyboardType(.decimalPad)
             }
             
             Section {
