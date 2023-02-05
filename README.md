@@ -16,9 +16,9 @@ Three Phases of Project 1:
 __________
 Checklist | Part 1: 
 - [x] [WeSplit: Introduction](https://www.hackingwithswift.com/books/ios-swiftui/wesplit-introduction)
-- [ ] [Understanding the basic structure of a SwiftUI app](https://www.hackingwithswift.com/books/ios-swiftui/understanding-the-basic-structure-of-a-swiftui-app)
-    - WIP
+- [X] [Understanding the basic structure of a SwiftUI app](https://www.hackingwithswift.com/books/ios-swiftui/understanding-the-basic-structure-of-a-swiftui-app)
 - [ ] [Creating a form](https://www.hackingwithswift.com/books/ios-swiftui/creating-a-form)
+    - WIP
 - [ ] [Adding a navigation bar](https://www.hackingwithswift.com/books/ios-swiftui/adding-a-navigation-bar)
 - [ ] [Modifying program state](https://www.hackingwithswift.com/books/ios-swiftui/modifying-program-state)
 - [ ] [Binding state to user interface controls](https://www.hackingwithswift.com/books/ios-swiftui/binding-state-to-user-interface-controls)
