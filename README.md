@@ -30,10 +30,10 @@ ___
 
 ___
 [x] Checklist | Part 1: 
-- [x] [WeSplit: Introduction](https://www.hackingwithswift.com/books/ios-swiftui/wesplit-introduction)
+- [x] 1. [WeSplit: Introduction](https://www.hackingwithswift.com/books/ios-swiftui/wesplit-introduction)
 - [X] [Understanding the basic structure of a SwiftUI app](https://www.hackingwithswift.com/books/ios-swiftui/understanding-the-basic-structure-of-a-swiftui-app)
-- [x] [Creating a form](https://www.hackingwithswift.com/books/ios-swiftui/creating-a-form)
-- [x] [Adding a navigation bar](https://www.hackingwithswift.com/books/ios-swiftui/adding-a-navigation-bar)
-- [x] [Modifying program state](https://www.hackingwithswift.com/books/ios-swiftui/modifying-program-state)
-- [x] [Binding state to user interface controls](https://www.hackingwithswift.com/books/ios-swiftui/binding-state-to-user-interface-controls)
-- [x] [Creating views in a loop](https://www.hackingwithswift.com/books/ios-swiftui/creating-views-in-a-loop)
+- [x] 2. [Creating a form](https://www.hackingwithswift.com/books/ios-swiftui/creating-a-form)
+- [x] 3. [Adding a navigation bar](https://www.hackingwithswift.com/books/ios-swiftui/adding-a-navigation-bar)
+- [x] 4. [Modifying program state](https://www.hackingwithswift.com/books/ios-swiftui/modifying-program-state)
+- [x] 5. [Binding state to user interface controls](https://www.hackingwithswift.com/books/ios-swiftui/binding-state-to-user-interface-controls)
+- [x] 6. [Creating views in a loop](https://www.hackingwithswift.com/books/ios-swiftui/creating-views-in-a-loop)
