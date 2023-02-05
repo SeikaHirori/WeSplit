@@ -13,6 +13,19 @@ struct ContentView: View {
             Text(helloWorld())
             Text(anotherWorld())
             Text(howdyFriend())
+            
+            // Item 4
+            Text(meepBeep())
+            Text(meepBeep())
+            Text(meepBeep())
+            Text(meepBeep())
+            Text(meepBeep())
+            Text(meepBeep())
+            Text(meepBeep())
+            
+//            // Item 11 isn't accepted
+//            Text(meepBeep())
+            
         }
     }
 }

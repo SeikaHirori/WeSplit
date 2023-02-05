@@ -33,3 +33,9 @@ func howdyFriend() -> String {
     
     return output
 }
+
+func meepBeep() -> String {
+    let output:String = "meep beep :O"
+    
+    return output
+}
