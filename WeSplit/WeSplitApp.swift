@@ -27,3 +27,9 @@ func anotherWorld() -> String {
     
     return output
 }
+
+func howdyFriend() -> String {
+    let output:String = "Howdy everyone :333"
+    
+    return output
+}
