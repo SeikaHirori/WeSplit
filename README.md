@@ -14,13 +14,17 @@ Three Phases of Project 1:
 - [ ] [Part 2](https://www.hackingwithswift.com/100/swiftui/17)
 - [ ] [Part 3](https://www.hackingwithswift.com/100/swiftui/18)
 
+Examples of completing a part or section:
+- "Part 2 complete"
+- "Section 2.1 finished"
 ___
 [ ] Checklist | Part 2:
-- [ ] [Reading text from the user with TextField](https://www.hackingwithswift.com/books/ios-swiftui/reading-text-from-the-user-with-textfield)
-- [ ] [Creating pickers in a form](https://www.hackingwithswift.com/books/ios-swiftui/creating-pickers-in-a-form)
-- [ ] [Adding a segmented control for tip percentages](https://www.hackingwithswift.com/books/ios-swiftui/adding-a-segmented-control-for-tip-percentages)
-- [ ] [Calculating the total per person](https://www.hackingwithswift.com/books/ios-swiftui/calculating-the-total-per-person)
-- [ ] [Hiding the keyboard](https://www.hackingwithswift.com/books/ios-swiftui/hiding-the-keyboard)
+- [x] 1. [Reading text from the user with TextField](https://www.hackingwithswift.com/books/ios-swiftui/reading-text-from-the-user-with-textfield)
+- [ ] 2. [Creating pickers in a form](https://www.hackingwithswift.com/books/ios-swiftui/creating-pickers-in-a-form)
+    - WIP
+- [ ] 3. [Adding a segmented control for tip percentages](https://www.hackingwithswift.com/books/ios-swiftui/adding-a-segmented-control-for-tip-percentages)
+- [ ] 4. [Calculating the total per person](https://www.hackingwithswift.com/books/ios-swiftui/calculating-the-total-per-person)
+- [ ] 5. [Hiding the keyboard](https://www.hackingwithswift.com/books/ios-swiftui/hiding-the-keyboard)
 
 
 
