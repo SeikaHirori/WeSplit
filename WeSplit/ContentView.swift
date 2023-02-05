@@ -12,8 +12,9 @@ struct ContentView: View {
     
     var body:some View {
         Form {
-            TextField("Enter your name", text: $name) // "$" makes it a two-way binding; It'll get written to the property
-            Text("Your name is \(name)") // Without the "$", it only reads the property
+            ForEach(0..<100) { number in
+                Text("Row: \(number)")
+            }
         }
     }
     
