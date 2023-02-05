@@ -10,13 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Form {
-            Group {
+            Section {
             Text(helloWorld())
             Text(anotherWorld())
             Text(howdyFriend())
             }
             // Item 4
-            Group {
+            Section {
                 Text(meepBeep())
                 Text(meepBeep())
                 Text(meepBeep())
