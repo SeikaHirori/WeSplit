@@ -17,7 +17,11 @@ struct ContentView: View {
     var body:some View {
         Form {
             Section {
-                TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                // // Depreciated in iOS 16
+                // TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                
+                // Xcode recommends this call instead
+                TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
             }
         }
     }
