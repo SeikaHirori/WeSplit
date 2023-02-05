@@ -9,27 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Form {
-            Section {
-            Text(helloWorld())
-            Text(anotherWorld())
-            Text(howdyFriend())
+        NavigationView {
+            Form {
+                Section {
+                Text(helloWorld())
+                Text(anotherWorld())
+                Text(howdyFriend())
+                }
             }
-            // Item 4
-            Section {
-                Text(meepBeep())
-                Text(meepBeep())
-                Text(meepBeep())
-                Text(meepBeep())
-                Text(meepBeep())
-                Text(meepBeep())
-                Text(meepBeep())
-                // Item 11 isn't accepted
-                Text(meepBeep())
-                Text("Item 12")
-            }
-            
-            
+            .navigationTitle("SwiftUI") // Officially adds navigation bar, so scrolling doesn't collude with upper status bar
+            .navigationBarTitleDisplayMode(.inline) // This makes font smaller for "SwiftUI"
         }
     }
 }
