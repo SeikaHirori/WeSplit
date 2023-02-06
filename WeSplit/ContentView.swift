@@ -15,9 +15,10 @@ struct ContentView: View {
     let tipPercentages:[Int] = [10, 15, 20, 25, 0]
     
     var totalPerPerson: Double {
+        var output: Double = 0
         // TODO: Calculate the total per person here
-        
-        return 0
+
+        return output
     }
     
     var body:some View {
