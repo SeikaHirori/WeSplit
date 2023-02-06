@@ -16,7 +16,7 @@ struct ContentView: View {
     
     var totalPerPerson: Double {
         var output: Double
-        // TODO: Calculate the total per person here
+        
         let peopleCount:Double = Double(numberOfPeople + 2) // Adding 2 as to compensate for how "ForEach(2..100)" starts at 0 (not 2)
         let tipSelection:Double = Double(tipPercentage)
         
@@ -61,9 +61,7 @@ struct ContentView: View {
                 }
                 
                 Section {
-//                    var totalAfterTip = checkAmount + (checkAmount * Double(tipPercentage) * 0.01)
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-//                    Text(checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                 } header: {
                     Text("Total Per Person")
                 }
