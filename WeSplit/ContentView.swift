@@ -14,7 +14,6 @@ struct ContentView: View {
     
     let tipPercentages:[Int] = [10, 15, 20, 25, 0]
     
-    
     var body:some View {
         NavigationView{
             Form {
