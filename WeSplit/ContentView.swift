@@ -14,6 +14,7 @@ struct ContentView: View {
     
     let tipPercentages:[Int] = [10, 15, 20, 25, 0]
     
+    
     var body:some View {
         Form {
             Section {
@@ -27,6 +28,12 @@ struct ContentView: View {
                 Picker("Number of people", selection: $numberOfPeople){
                     ForEach(2..<100) {
                         Text("\($0) people")
+                    }
+                }
+                
+                Picker("Tip percentage", selection: $tipPercentage) {
+                    ForEach(tipPercentages, id: \.self) {
+                        Text("\($0)%")
                     }
                 }
             }
