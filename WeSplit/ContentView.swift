@@ -36,6 +36,15 @@ struct ContentView: View {
         return output
     }
     
+    // Bonus challenge
+    var currencyType: FloatingPointFormatStyle<Double>.Currency {
+        var result: FloatingPointFormatStyle<Double>.Currency
+        
+        result = Locale.current.currency?.identifier ?? "USD"
+        
+        return result
+    }
+    
     @FocusState private var amountIsFocused: Bool // "@FocusState" doesn't take a value when created, so default state is false. If it was possible that you could set it to true as the launch state, it would be annoying to have the keyboard pop up when the app is launched :O
     
     var body:some View {
@@ -59,15 +68,19 @@ struct ContentView: View {
                 
                 Section {
                     Picker("Tip percentage", selection: $tipPercentage) {
-                        ForEach(tipPercentages, id: \.self) {
+                        ForEach(0..<101) { // Challenge 3
                             Text($0, format: .percent)
                         }
                     }
-                    .pickerStyle(.segmented)
+                    .pickerStyle(.navigationLink) // This directs to a submenu
+                    
+                    
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
                 
+                
+                // Challenge 2
                 Section {
                     Text(grandTotalAfterTip, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                 } header: {
@@ -76,7 +89,7 @@ struct ContentView: View {
                 
                 Section {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                } header: {
+                } header: { // Challenge 1
                     Text("Amount Per Person")
                 }
             }
