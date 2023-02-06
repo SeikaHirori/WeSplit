@@ -15,9 +15,16 @@ struct ContentView: View {
     let tipPercentages:[Int] = [10, 15, 20, 25, 0]
     
     var totalPerPerson: Double {
-        var output: Double = 0
+        var output: Double
         // TODO: Calculate the total per person here
+        let peopleCount:Double = Double(numberOfPeople + 2) // Adding 2 as to compensate for how "ForEach(2..100)" starts at 0 (not 2)
+        let tipSelection:Double = Double(tipPercentage)
+        
+        let tipValue: Double = (checkAmount / 100) * tipSelection
+        let grandTotal: Double = checkAmount + tipValue
+        let amountPerPerson: Double = grandTotal / peopleCount
 
+        output = amountPerPerson
         return output
     }
     
@@ -53,9 +60,11 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    var totalAfterTip = checkAmount + (checkAmount * Double(tipPercentage) * 0.01)
-                    Text(totalAfterTip, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                    Text(checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+//                    var totalAfterTip = checkAmount + (checkAmount * Double(tipPercentage) * 0.01)
+                    Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+//                    Text(checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                } header: {
+                    Text("Total Per Person")
                 }
             }
             .navigationTitle("WeSplit")
