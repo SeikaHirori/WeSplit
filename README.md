@@ -18,9 +18,26 @@ Examples of completing a part or section:
 - "Part 2 complete"
 - "Section 2.1 finished"
 
+___ 
+[ ] Checklist | Experiments
+- [ ] Write a functional test with XCTest
+    - NOTE: Might need to reference textbooks
+    - Info resources:
+        - TBA
+    - [ ] Write user story with this criteria
+        - [ ] Enter amount: $10
+            - THe program should convert it from "$10" to "$10.00"
+        - [ ] Select amount of people: 2
+        - [ ] Tap on percentage tip: 10%
+        - [ ] The Total Per Person: $6.00
 ___
 [ ] Checklist | Part 3:
 - [ ] 1. [WeSplit: Wrap up](https://www.hackingwithswift.com/books/ios-swiftui/wesplit-wrap-up)
+    - Challenges:
+        - [ ] 1. Add a header to the third section, saying “Amount per person”
+        - [ ] 2. Add another section showing the total amount for the check – i.e., the original amount plus tip value, without dividing by the number of people.
+        - [ ] 3. Change the tip percentage picker to show a new screen rather than using a segmented control, and give it a wider range of options – everything from 0% to 100%. Tip: use the range 0..<101 for your range rather than a fixed array.
+
 - [ ] 2. [Review for Project 1: WeSplit](https://www.hackingwithswift.com/review/ios-swiftui/wesplit)
 
 ___
