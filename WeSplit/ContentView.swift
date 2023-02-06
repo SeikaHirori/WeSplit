@@ -28,6 +28,8 @@ struct ContentView: View {
         return output
     }
     
+    @FocusState private var amountIsFocused: Bool // "@FocusState" doesn't take a value when created, so default state is false. If it was possible that you could set it to true as the launch state, it would be annoying to have the keyboard pop up when the app is launched :O
+    
     var body:some View {
         NavigationView{
             Form {
@@ -38,14 +40,13 @@ struct ContentView: View {
                     // Xcode recommends this call instead
                     TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                         .keyboardType(.decimalPad)
+                        .focused($amountIsFocused)
                     
                     Picker("Number of people", selection: $numberOfPeople){
                         ForEach(2..<100) {
                             Text("\($0) people")
                         }
                     }
-                    
-                    
                 }
                 
                 Section {
@@ -68,6 +69,13 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("WeSplit")
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Button("Done") {
+                        amountIsFocused = false
+                    }
+                }
+            }
         }
     }
 }
