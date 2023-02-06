@@ -33,12 +33,14 @@ struct ContentView: View {
                     
                     Picker("Tip percentage", selection: $tipPercentage) {
                         ForEach(tipPercentages, id: \.self) {
-                            Text("\($0)%")
+                            Text($0, format: .percent)
                         }
                     }
                 }
                 
                 Section {
+                    var totalAfterTip = checkAmount + (checkAmount * Double(tipPercentage) * 0.01)
+                    Text(totalAfterTip, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     Text(checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                 }
             }
