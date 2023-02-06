@@ -14,15 +14,23 @@ struct ContentView: View {
     
     let tipPercentages:[Int] = [10, 15, 20, 25, 0]
     
+    var grandTotalAfterTip: Double {
+        var result: Double = 0.0
+        
+        let tipSelection:Double = Double(tipPercentage)
+        
+        let tipValue: Double = (checkAmount / 100) * tipSelection
+        result = checkAmount + tipValue
+        
+        return result
+    }
+    
     var totalPerPerson: Double {
         var output: Double
         
         let peopleCount:Double = Double(numberOfPeople + 2) // Adding 2 as to compensate for how "ForEach(2..100)" starts at 0 (not 2)
-        let tipSelection:Double = Double(tipPercentage)
         
-        let tipValue: Double = (checkAmount / 100) * tipSelection
-        let grandTotal: Double = checkAmount + tipValue
-        let amountPerPerson: Double = grandTotal / peopleCount
+        let amountPerPerson: Double = grandTotalAfterTip / peopleCount
 
         output = amountPerPerson
         return output
@@ -58,6 +66,12 @@ struct ContentView: View {
                     .pickerStyle(.segmented)
                 } header: {
                     Text("How much tip do you want to leave?")
+                }
+                
+                Section {
+                    Text(grandTotalAfterTip, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                } header: {
+                    Text("Grand total after tip")
                 }
                 
                 Section {
