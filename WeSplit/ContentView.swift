@@ -41,9 +41,6 @@ struct ContentView: View {
         var result: FloatingPointFormatStyle<Double>.Currency
         
         result = .currency(code: Locale.current.currency?.identifier ?? "USD")
-//        // Testing only
-//        result = .currency(code: "CHF")
-        
         return result
     }
     
