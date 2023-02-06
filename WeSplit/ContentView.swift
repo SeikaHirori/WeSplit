@@ -40,7 +40,9 @@ struct ContentView: View {
     var currencyType: FloatingPointFormatStyle<Double>.Currency {
         var result: FloatingPointFormatStyle<Double>.Currency
         
-        result = Locale.current.currency?.identifier ?? "USD"
+        result = .currency(code: Locale.current.currency?.identifier ?? "USD")
+//        // Testing only
+//        result = .currency(code: "CHF")
         
         return result
     }
@@ -55,7 +57,7 @@ struct ContentView: View {
                     // TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                     
                     // Xcode recommends this call instead
-                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    TextField("Amount", value: $checkAmount, format: currencyType)
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
                     
@@ -82,13 +84,13 @@ struct ContentView: View {
                 
                 // Challenge 2
                 Section {
-                    Text(grandTotalAfterTip, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(grandTotalAfterTip, format: currencyType)
                 } header: {
                     Text("Grand total after tip")
                 }
                 
                 Section {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(totalPerPerson, format: currencyType)
                 } header: { // Challenge 1
                     Text("Amount Per Person")
                 }
