@@ -16,31 +16,34 @@ struct ContentView: View {
     
     
     var body:some View {
-        Form {
-            Section {
-                // // Depreciated in iOS 16
-                // TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                
-                // Xcode recommends this call instead
-                TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                    .keyboardType(.decimalPad)
-                
-                Picker("Number of people", selection: $numberOfPeople){
-                    ForEach(2..<100) {
-                        Text("\($0) people")
+        NavigationView{
+            Form {
+                Section {
+                    // // Depreciated in iOS 16
+                    // TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    
+                    // Xcode recommends this call instead
+                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                        .keyboardType(.decimalPad)
+                    
+                    Picker("Number of people", selection: $numberOfPeople){
+                        ForEach(2..<100) {
+                            Text("\($0) people")
+                        }
+                    }
+                    
+                    Picker("Tip percentage", selection: $tipPercentage) {
+                        ForEach(tipPercentages, id: \.self) {
+                            Text("\($0)%")
+                        }
                     }
                 }
                 
-                Picker("Tip percentage", selection: $tipPercentage) {
-                    ForEach(tipPercentages, id: \.self) {
-                        Text("\($0)%")
-                    }
+                Section {
+                    Text(checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                 }
             }
-            
-            Section {
-                Text(checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-            }
+            .navigationTitle("WeSplit")
         }
     }
 }
