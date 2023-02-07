@@ -23,7 +23,7 @@ Three Phases of Project 1:
 - [x] [Part 3](https://www.hackingwithswift.com/100/swiftui/18)
 
 ___ 
-[ ] Checklist | Experiments
+[ ] Checklist | Experiments/ DIY
 - [ ] Write a functional test with XCTest
     - NOTE: Might need to reference textbooks
     - Info resources:
