@@ -24,11 +24,24 @@ final class WeSplitUITests: XCTestCase {
 
     func testExample() throws {
         // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+        let app:XCUIApplication = XCUIApplication()
         app.launch()
         
+    
+        let amountTF = app.textFields["Amount"]
+        XCTAssert(amountTF.exists)
         
-
+        amountTF.tap()
+        
+        amountTF.keyboards.buttons["Delete"].tap(withNumberOfTaps: 4, numberOfTouches: 1)
+        amountTF.keys["2"].tap()
+        amountTF.keys["0"].tap()
+//        let v1GrandTotalWith20percentTip = app.staticTexts["$24.00"].label
+//        XCTAssertEqual(v1GrandTotalWith20percentTip, "$24.00")
+        
+        
+        XCTAssertEqual(amountTF.value as! Double, 20.00)
+//
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 

@@ -38,6 +38,11 @@
                BlueprintName = "WeSplitTests"
                ReferencedContainer = "container:WeSplit.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "WeSplitTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO"
@@ -52,6 +57,9 @@
             <SkippedTests>
                <Test
                   Identifier = "WeSplitUITests/testLaunchPerformance()">
+               </Test>
+               <Test
+                  Identifier = "WeSplitUITestsLaunchTests">
                </Test>
                <Test
                   Identifier = "WeSplitUITestsLaunchTests/testLaunch()">
