@@ -16,6 +16,10 @@ Examples of completing a part or section:
 - "Section 2.1 finished"
 
 ___
+Task from [Project 3](https://www.hackingwithswift.com/books/ios-swiftui/views-and-modifiers-wrap-up)
+- [x] Go back to project 1 and use a conditional modifier to change the total amount text view to red if the user selects a 0% tip.
+
+___
 
 Three Phases of Project 1:
 - [x] [Part 1](https://www.hackingwithswift.com/100/swiftui/16)

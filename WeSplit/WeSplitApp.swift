@@ -39,3 +39,12 @@ func meepBeep() -> String {
     
     return output
 }
+
+func directlyAddOne(input:String) -> String {
+    var result:String
+    
+    result = input
+    result += "!"
+    
+    return result
+}

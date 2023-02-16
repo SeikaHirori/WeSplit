@@ -27,6 +27,18 @@ final class WeSplitTests: XCTestCase {
         XCTAssertEqual(output, "Hello world! It's a good day :3")
     }
     
+    func testDirectlyAddOne() {
+        var output:String = directlyAddOne(input: "")
+        let expect1:String = "!"
+        XCTAssertEqual(output, expect1)
+        
+        output = directlyAddOne(input: "Hello")
+        let expect2:String = "Hello!"
+        XCTAssertEqual(output, expect2)
+        
+        
+    }
+    
     
 //    func testExample() throws {
 //        // This is an example of a functional test case.

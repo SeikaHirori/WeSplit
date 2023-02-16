@@ -31,7 +31,7 @@ struct ContentView: View {
         let peopleCount:Double = Double(numberOfPeople + 2) // Adding 2 as to compensate for how "ForEach(2..100)" starts at 0 (not 2)
         
         let amountPerPerson: Double = grandTotalAfterTip / peopleCount
-
+        
         output = amountPerPerson
         return output
     }
@@ -46,17 +46,26 @@ struct ContentView: View {
     
     @FocusState private var amountIsFocused: Bool // "@FocusState" doesn't take a value when created, so default state is false. If it was possible that you could set it to true as the launch state, it would be annoying to have the keyboard pop up when the app is launched :O
     
+    @State private var red_when_zero_percent:Bool = false
+    
+    func amountIsZero(tipPercent:Int) {
+        if tipPercent == 0 {
+            red_when_zero_percent = true
+        } else {
+            red_when_zero_percent = false
+        }
+    }
+
     var body:some View {
-        NavigationView{
+        NavigationView {
             Form {
                 Section {
-                    // // Depreciated in iOS 16
-                    // TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                     
                     // Xcode recommends this call instead
                     TextField("Amount", value: $checkAmount, format: currencyType)
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
+//                        .foregroundColor(red_when_zero_percent ? .red : .blue)
                     
                     Picker("Number of people", selection: $numberOfPeople){
                         ForEach(2..<100) {
@@ -70,24 +79,31 @@ struct ContentView: View {
                         ForEach(0..<101) { // Challenge 3
                             Text($0, format: .percent)
                         }
+                        
                     }
                     .pickerStyle(.navigationLink) // This directs to a submenu
-                    
-                    
+                    // RFER # 3
+                    .onChange(of: tipPercentage) {
+                        amountIsZero(tipPercent: $0)
+                    }
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
                 
                 
+                
                 // Challenge 2
                 Section {
                     Text(grandTotalAfterTip, format: currencyType)
+                        .tip_is_zero_percent(red_when_zero_percent: red_when_zero_percent)
                 } header: {
                     Text("Grand total after tip")
+                    
                 }
                 
                 Section {
                     Text(totalPerPerson, format: currencyType)
+                        .tip_is_zero_percent(red_when_zero_percent: red_when_zero_percent)
                 } header: { // Challenge 1
                     Text("Amount Per Person")
                 }
@@ -104,10 +120,28 @@ struct ContentView: View {
             }
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension View {
+    // RFER #4
+    func tip_is_zero_percent(red_when_zero_percent:Bool) -> some View {
+        modifier(go_red_when_zero_percentage(percentage_is_zero: red_when_zero_percent))
+    }
+}
+
+// RFER #4
+struct go_red_when_zero_percentage:ViewModifier {
+    let percentage_is_zero:Bool
+    
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(percentage_is_zero ? .red : .blue)
     }
 }

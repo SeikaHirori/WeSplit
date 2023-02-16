@@ -30,17 +30,19 @@ final class WeSplitUITests: XCTestCase {
     
         let amountTF = app.textFields["Amount"]
         XCTAssert(amountTF.exists)
+        amountTF.doubleTap()
+        amountTF.typeText("20")
         
-        amountTF.tap()
+        let tipPicker = app.pickers["Number of people"]
+        XCTAssert(tipPicker.exists)
+        tipPicker.tap()
+
         
-        amountTF.keyboards.buttons["Delete"].tap(withNumberOfTaps: 4, numberOfTouches: 1)
-        amountTF.keys["2"].tap()
-        amountTF.keys["0"].tap()
-//        let v1GrandTotalWith20percentTip = app.staticTexts["$24.00"].label
-//        XCTAssertEqual(v1GrandTotalWith20percentTip, "$24.00")
+        let v1GrandTotalWith10percentTip = app.staticTexts["$22.00"].label
+        XCTAssertEqual(v1GrandTotalWith10percentTip, "$22.00")
         
         
-        XCTAssertEqual(amountTF.value as! Double, 20.00)
+//        XCTAssertEqual(amountTF.label as! Double, 20.00)
 //
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
